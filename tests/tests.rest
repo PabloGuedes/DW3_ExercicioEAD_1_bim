@@ -1,0 +1,31 @@
+### Get todas as salas de aula
+GET http://localhost:3000/salasdeaula HTTP/1.1
+Content-Type: application/json
+
+### Get sala de aula por ID
+GET http://localhost:3000/salasdeaula/1 HTTP/1.1
+Content-Type: application/json
+
+### Inserir nova sala de aula
+POST http://localhost:3000/salasdeaula HTTP/1.1
+Content-Type: application/json
+
+{
+  "descricao": "Sala 103",
+  "localizacao": "Bloco C",
+  "capacidade": 40
+}
+
+### Atualizar sala de aula existente
+PUT http://localhost:3000/salasdeaula/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "descricao": "Sala 101 - Atualizada",
+  "localizacao": "Bloco A",
+  "capacidade": 35
+}
+
+### Deletar (soft delete) sala de aula
+DELETE http://localhost:3000/salasdeaula/1 HTTP/1.1
+Content-Type: application/json
